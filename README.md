@@ -36,7 +36,7 @@ The primary stakeholders for this case study are as follows.
 
 To answer the question “How do annual members and casual riders use Cyclistic bikes differently?”. I will be using Cyclistic’s historical trip data analyzing and identifying trends.
 
-##The Data
+## The Data
 
 The historical data I will be using for the capstone come from the website Divvy since Cyclistic is a fictional company. The data is located at https://divvy-tripdata.s3.amazonaws.com/index.html. I can use this data under the Data License Agreement at https://ride.divvybikes.com/data-license-agreement. The data is anonymous by identifying use of bikes by Ride ID so there is no identifiable information. The data is organized separating the ride data monthly. For this report, the data I used ranges from November 2020 to October 2021.
 
@@ -149,7 +149,7 @@ To analyze the data and to answer the question “How do annual members and casu
 
 The first piece of data I wanted to analyze is to count the number of rides casual riders take compared to annual members.
 
-![Rides taken: Casual Riders vs Annual Members](C:/Users/Ryan/OneDrive\Documents\Education documents\Coursera\Google Data Analytics\Course8\Case Study\Bike Share_New\Bikeshare_Project\BikeShare_RidesTaken_CasualMember.png)
+![Rides taken: Casual Riders vs Annual Members](https://github.com/Ryan-OHanlon/Grow-With-Google-Data-Analytics-Case-Study-Cyclistic-BikeShare/blob/main/BikeShare_RidesTaken_CasualMember.png)
 ```{r all-tripsv5-member-casual}
 table(all_tripsv5$member_casual)
 ```
@@ -158,7 +158,7 @@ It turns out that in terms of bike rentals, annual members use Cyclist bikes mor
 
 When I break down the number of rides taken by what day of the week the first difference between casual riders and annual members appears.
 
-![Rides Taken Weekdays](C:/Users/Ryan/OneDrive\Documents\Education documents\Coursera\Google Data Analytics\Course8\Case Study\Bike Share_New\Bikeshare_Project/Bikeshare_Weekday_RidesTaken_AvgDuration.png)
+![Rides Taken Weekdays](https://github.com/Ryan-OHanlon/Grow-With-Google-Data-Analytics-Case-Study-Cyclistic-BikeShare/blob/main/BikeShare_Weekday_RidesTaken_AvgDuration.png)
 ```{r all-tripsv5-ridestakenperday}
 all_tripsv5 %>% 
   mutate(weekday = wday(started_at, label = TRUE)) %>%  #creates weekday field using wday()
@@ -172,7 +172,7 @@ Casual riders use Cyclist bikes more during the weekends while annual members us
 
 Another aspect I thought would tell me the difference between casual riders and annual members was the type of bike they rented out. There are three types of bikes that Cyclist rents out: Classic bikes, docked bikes, and Electric bikes. I created the table `rider_type` from counting member_casual and rideable_type columns.
 
-![Rides Taken Weekdays](C:/Users/Ryan/OneDrive\Documents\Education documents\Coursera\Google Data Analytics\Course8\Case Study\Bike Share_New\Bikeshare_Project/Bikeshare_BikePreference.png)
+![Rides Taken Weekdays](https://github.com/Ryan-OHanlon/Grow-With-Google-Data-Analytics-Case-Study-Cyclistic-BikeShare/blob/main/BikeShare_BikePreference.png)
 ```{r rider-type}
 rider_type <- count(all_tripsv5, member_casual, rideable_type)
 
@@ -185,7 +185,7 @@ While classic bikes are the preferred choice between both casual riders and annu
 
 The last difference I wanted to find out was how long do both casual riders and annual members use Cyclist bikes each day of the week.
 
-![Rides Taken Weekdays](C:/Users/Ryan/OneDrive\Documents\Education documents\Coursera\Google Data Analytics\Course8\Case Study\Bike Share_New\Bikeshare_Project/Bikeshare_Weekday_RidesTaken_AvgDuration.png)
+![Rides Taken Weekdays](https://github.com/Ryan-OHanlon/Grow-With-Google-Data-Analytics-Case-Study-Cyclistic-BikeShare/blob/main/BikeShare_Weekday_RidesTaken_AvgDuration.png)
 
 ```{r all-tripsv5-avgduration}
 all_tripsv5 %>% 
@@ -207,7 +207,6 @@ With the analysis complete, I needed to create visualizations based on the data 
 
 Thanks to ggplot2 package, I was able to convert the results of my analysis into visualizations in R studio. To make the visualizations presentable for the executive team, I used the classic theme and added labels to the x-axis, y-axis, legend, title, subtitle, and caption citing the source of data. I chose to present the visualizations through bar charts due as it was the easiest way to convey the massive number of rides taken over the course of the year and provide a direct comparison between casual riders and annual members.
 
-![Rides Taken Weekdays](C:/Users/Ryan/OneDrive\Documents\Education documents\Coursera\Google Data Analytics\Course8\Case Study\Bike Share_New\Bikeshare_Project/Bikeshare_RidesTaken.png)
 ```{r rider-count}
 rider_count <- all_tripsv5 %>%
   count(member_casual)
@@ -223,6 +222,7 @@ rider_count %>%
        caption = "Source: https://divvy-tripdata.s3.amazonaws.com/index.html")+
   theme_classic()
 ```
+![Rides Taken](https://github.com/Ryan-OHanlon/Grow-With-Google-Data-Analytics-Case-Study-Cyclistic-BikeShare/blob/main/BikeShare_RidesTaken.png)
 
 ```{r all-tripsv5-ridesperday-chart}
 all_tripsv5 %>% 
@@ -240,6 +240,7 @@ all_tripsv5 %>%
        caption = "Source: https://divvy-tripdata.s3.amazonaws.com/index.html")+
   theme_classic()
 ```
+![Rides Taken Weekdays](https://github.com/Ryan-OHanlon/Grow-With-Google-Data-Analytics-Case-Study-Cyclistic-BikeShare/blob/main/BikeShare_RidesTaken_Weekday.png)
 
 ```{r rider-type-chart}
 rider_type %>%
@@ -254,6 +255,7 @@ rider_type %>%
        caption = "Source: https://divvy-tripdata.s3.amazonaws.com/index.html")+
   theme_classic()
 ```
+![Bike_Preference](https://github.com/Ryan-OHanlon/Grow-With-Google-Data-Analytics-Case-Study-Cyclistic-BikeShare/blob/main/BikeShare_BikeType_RiderType.png)
 
 ```{r all-tripsv5-avgduration-chart}
 all_tripsv5 %>% 
@@ -269,6 +271,7 @@ all_tripsv5 %>%
        caption = "Source: https://divvy-tripdata.s3.amazonaws.com/index.html")+
   theme_classic()
 ```
+![Avg_Ride_Duration_Weekday](https://github.com/Ryan-OHanlon/Grow-With-Google-Data-Analytics-Case-Study-Cyclistic-BikeShare/blob/main/Bike%20Share_AvgTripDuration_Weekday.png)
 
 ## Presentation
 
