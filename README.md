@@ -1,40 +1,5 @@
 # Grow-With-Google-Data-Analytics-Case-Study-Cyclistic-BikeShare
 Grow with Google Data Analytics Case Study Project
----
-title: 'Grow With Google Case Study: How Does a Bike-Share Navigate Speed Success?'
-author: "Ryan O'Hanlon"
-date: "2021 01 01"
-output:
-  html_document: default
----
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
-```{r include = FALSE}
-library(tidyverse)
-library(dplyr)
-library(ggplot2)
-library(readr)
-library(stringr)
-library(tibble)
-library(purrr)
-library(lubridate)
-
-tripdata_202011 <- read.csv("C:/Users/Ryan/OneDrive/Documents/Education documents/Coursera/Google Data Analytics/Course8/Case Study/Bike Share_New/Data/tripdata_202011.csv")
-tripdata_202012 <-read.csv("C:/Users/Ryan/OneDrive/Documents/Education documents/Coursera/Google Data Analytics/Course8/Case Study/Bike Share_New/Data/tripdata_202012.csv")
-tripdata_202101 <-read.csv("C:/Users/Ryan/OneDrive/Documents/Education documents/Coursera/Google Data Analytics/Course8/Case Study/Bike Share_New/Data/tripdata_202101.csv")
-tripdata_202102 <-read.csv("C:/Users/Ryan/OneDrive/Documents/Education documents/Coursera/Google Data Analytics/Course8/Case Study/Bike Share_New/Data/tripdata_202102.csv")
-tripdata_202103 <-read.csv("C:/Users/Ryan/OneDrive/Documents/Education documents/Coursera/Google Data Analytics/Course8/Case Study/Bike Share_New/Data/tripdata_202103.csv")
-tripdata_202104 <-read.csv("C:/Users/Ryan/OneDrive/Documents/Education documents/Coursera/Google Data Analytics/Course8/Case Study/Bike Share_New/Data/tripdata_202104.csv")
-tripdata_202105 <-read.csv("C:/Users/Ryan/OneDrive/Documents/Education documents/Coursera/Google Data Analytics/Course8/Case Study/Bike Share_New/Data/tripdata_202105.csv")
-tripdata_202106 <-read.csv("C:/Users/Ryan/OneDrive/Documents/Education documents/Coursera/Google Data Analytics/Course8/Case Study/Bike Share_New/Data/tripdata_202106.csv")
-tripdata_202107 <-read.csv("C:/Users/Ryan/OneDrive/Documents/Education documents/Coursera/Google Data Analytics/Course8/Case Study/Bike Share_New/Data/tripdata_202107.csv")
-tripdata_202108 <-read.csv("C:/Users/Ryan/OneDrive/Documents/Education documents/Coursera/Google Data Analytics/Course8/Case Study/Bike Share_New/Data/tripdata_202108.csv")
-tripdata_202109 <-read.csv("C:/Users/Ryan/OneDrive/Documents/Education documents/Coursera/Google Data Analytics/Course8/Case Study/Bike Share_New/Data/tripdata_202109.csv")
-tripdata_202110 <-read.csv("C:/Users/Ryan/OneDrive/Documents/Education documents/Coursera/Google Data Analytics/Course8/Case Study/Bike Share_New/Data/tripdata_202110.csv")
-```
 
 # Introduction
 
